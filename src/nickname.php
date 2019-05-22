@@ -60,6 +60,20 @@
           $brackets = "--x" . $result2 . $rev2 . "--";
           echo "<p>" . $brackets . "</p>";
         }
+
+        //capitalize random letters
+        $strArray = str_split($input);
+        $strArrayLength = count($strArray) - 1;
+        $randomLetter = rand(0, $strArrayLength);
+
+        if (ctype_upper($strArray[$randomLetter])){
+          $strArray[$randomLetter] = strtolower($strArray[$randomLetter]);
+        } else {
+          $strArray[$randomLetter] = strtoupper($strArray[$randomLetter]);
+        }
+
+        $resultString = "--x" . $result2 . implode($strArray) . "--";
+        echo "<p>" . $resultString . "</p>";
       ?>
     </div>
 
