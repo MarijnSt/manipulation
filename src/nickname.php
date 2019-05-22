@@ -50,6 +50,15 @@
 
           $randChars = "--x" . $result . $rev2 . "--";
           echo "<p>" . $randChars . "</p>";
+
+          //brackets
+          $result2 = "";
+          $strlength = strlen($result);
+          for ($i = 0; $i < $strlength; $i++){
+            $result2 .= "[" . $result[$i] . "]";
+          }
+          $brackets = "--x" . $result2 . $rev2 . "--";
+          echo "<p>" . $brackets . "</p>";
         }
       ?>
     </div>
